@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#toggle-switch::after {
+content: '';
+@apply h-5 w-5 rounded-full bg-blue-500 absolute -top-[1px] left-0 transform scale-75
+transition duration-500 checked:bg-zinc-200;
+}
+
+#toggle-switch:checked::after {
+@apply transform scale-75 translate-x-[18px];
+}
